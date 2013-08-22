@@ -105,6 +105,5 @@
     </feature>
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
-      <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
     </plugins>
 </widget>
