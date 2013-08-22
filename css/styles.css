@@ -113,7 +113,7 @@ li {
     padding: 0;
     display: -webkit-box;
     display: -moz-box;
-    display: box;
+    display: block;
     width: 100%;
 }
 
@@ -140,6 +140,11 @@ li>a {
 
 li>a * {
     pointer-events: none;
+}
+
+li>a.tappable-active {
+    color: #fff;
+    background-color: #4286f5;
 }
 
 .button {
@@ -171,7 +176,7 @@ li>a * {
 
 h1 {
     font-size: 18px;
-    padding: 20 0 0 0;
+    padding: 20px 0 0 0;
     margin: 0px;
 }
 
@@ -187,4 +192,40 @@ h2 {
     margin:10px;
     width:100px;
     height:100px;
+}
+
+.scroll {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 84px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform:translate3d(0,0,0);
+}
+ 
+.stage-center {
+    top: 0;
+    left: 0;
+}
+ 
+.stage-left {
+    left: -100%;
+}
+ 
+.stage-right {
+    left: 100%;
+}
+ 
+.transition {
+    -moz-transition-duration: .375s;
+    -webkit-transition-duration: .375s;
+    -o-transition-duration: .375s;
 }
