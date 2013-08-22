@@ -3,11 +3,21 @@
         if (!navigator.contacts) {
             return;
         }
-        var employees = {};
+        
         var options = new ContactFindOptions();
+        options.filter = "R";
+        var fields = ["givenName", "familyName", "work", "mobile"];
+        navigator.contacts.find(fields, onSuccess, onFail, options);
         self.showAlert("Device Contact Store", "Info");
+        this.callLater(callback, this.contacts);
+    };
 
-        this.callLater(callback, employees);
+    var onSuccess = function (contacts) {
+        this.contacts = contacts;
+    };
+
+    var onFail = function (contactError) {
+        
     };
 
     // Used to simulate async calls. This is done to provide a consistent interface with stores (like WebSqlStore)
@@ -19,6 +29,8 @@
             });
         }
     };
+
+    this.contacts = [];
 
     this.callLater(successCallback);
 }

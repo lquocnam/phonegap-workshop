@@ -12,7 +12,7 @@ var app = {
         var self = this;
         this.detailsURL = /^#contacts\/(\d{1,})/;
         this.registerEvents();
-        this.store = new MemoryStore(function () {
+        this.store = new DeviceContactStore(function () {
             self.showAlert("Store Initialized", "Info");
             self.route();
         });        
