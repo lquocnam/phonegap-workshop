@@ -16,13 +16,13 @@
             app.showAlert("Contacts API not supported", "Error");
             return;
         }
-        var contact = navigator.contacts.create();
-        contact.name = { givenName: employee.firstName, familyName: employee.lastName };
+        var contactObj = navigator.contacts.create();
+        contactObj.name = { givenName: contact.firstName, familyName: contact.lastName };
         var phoneNumbers = [];
-        phoneNumbers[0] = new ContactField('work', employee.officePhone, false);
-        phoneNumbers[1] = new ContactField('mobile', employee.cellPhone, true); // preferred number
-        contact.phoneNumbers = phoneNumbers;
-        contact.save();
+        phoneNumbers[0] = new ContactField('work', contact.officePhone, false);
+        phoneNumbers[1] = new ContactField('mobile', contact.cellPhone, true); // preferred number
+        contactObj.phoneNumbers = phoneNumbers;
+        contactObj.save();
         return false;
     };
 

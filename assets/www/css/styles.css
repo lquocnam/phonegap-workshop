@@ -51,7 +51,7 @@ body {
 }
 
 .header-button-left {
-    left: 4;
+    left: 4px;
 }
 
 .search-bar {
@@ -187,7 +187,7 @@ h2 {
     margin: 0px;
 }
 
-.employee-image {
+.contact-image {
     float:left;
     margin:10px;
     width:100px;
