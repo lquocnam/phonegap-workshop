@@ -11,8 +11,8 @@ var HomeView = function(store) {
     
     this.findByName = function() {
     	var self = this;
-        store.findByName($('.search-key').val(), function(employees) {
-            $('.contact-list').html(HomeView.tplContactLi(employees));
+    	store.findByName($('.search-key').val(), function (contacts) {
+    	    $('.contact-list').html(HomeView.tplContactLi(contacts));
             //iScroll
             if (self.iscroll) {
                 console.log('Refresh iScroll');
