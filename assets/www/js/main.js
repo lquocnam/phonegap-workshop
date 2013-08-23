@@ -13,7 +13,7 @@ var app = {
         this.detailsURL = /^#contacts\/(\d{1,})/;
         this.registerEvents();
         this.store = new DeviceContactStore(function () {
-            self.showAlert("Store Initialized", "Info");
+            //self.showAlert("Store Initialized", "Info");
             self.route();
         });        
     },
