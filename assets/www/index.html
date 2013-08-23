@@ -30,16 +30,16 @@
         </div>
         <div class='details'>
             <img class='contact-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-            <h1>{{firstName}} {{lastName}}</h1>
-            <h2>{{title}}</h2>
+            <h1>{{displayName}}</h1>
+            <!--<h2>{{title}}</h2>-->
             <span class="location"></span>
             <ul>
                 <li><a href="tel:{{officePhone}}">Call Office<br />
-                    {{officePhone}}</a></li>
+                    {{phoneNumbers[0].value}}</a></li>
                 <li><a href="tel:{{cellPhone}}">Call Cell<br />
-                    {{cellPhone}}</a></li>
+                    {{phoneNumbers[0].value}}</a></li>
                 <li><a href="sms:{{cellPhone}}">SMS<br />
-                    {{cellPhone}}</a></li>
+                    {{phoneNumbers[0].value}}</a></li>
                 <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
             </ul>
         </div>

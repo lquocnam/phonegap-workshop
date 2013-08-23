@@ -7,15 +7,15 @@
         }
         //alert("Here");
         var options = new ContactFindOptions();
-        options.filter = "";
-        var fields = ["name", "phoneNumbers", "emails"];
+        options.filter = searchKey;
+        var fields = ["displayName", "phoneNumbers", "emails"];
         
         navigator.contacts.find(fields, onSuccess, onFail, options);
         callLater(callback, this.contacts);
     };
 
     var onSuccess = function (contacts) {
-        app.showAlert("Contact List Length: " + contacts.length);
+        app.showAlert("Contact List Length: " + contacts[0].displayName);
         this.contacts = contacts;
     };
 
