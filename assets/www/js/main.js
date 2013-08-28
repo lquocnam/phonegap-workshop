@@ -10,7 +10,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.detailsURL = /^#contacts\/(\d{1,})/;
+        this.detailsURL = /^#contacts\/([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})/;
         this.registerEvents();
         this.store = new DeviceContactStore(function () {
             //self.showAlert("Store Initialized", "Info");
@@ -50,7 +50,7 @@ var app = {
         }
         var match = hash.match(app.detailsURL);
         if (match) {
-            this.store.findById(Number(match[1]), function (contact) {
+            this.store.findById(match[1], function (contact) {
                 $('body').html(new ContactView(contact).render().el);
             });
         }

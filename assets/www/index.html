@@ -21,7 +21,8 @@
         {{#.}}
         <li><a href="#contacts/{{this.id}}">
             {{this.name.givenName}} {{this.name.middleName}} {{this.name.familyName}}<br />
-            {{this.displayName}}</a></li>
+            {{this.displayName}}</a>
+        </li>
         {{/.}}
     </script>
 
@@ -37,19 +38,9 @@
         <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1>
         </div>
         <div class='details'>
-            <img class='contact-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-            <h1>{{displayName}}</h1>
-            <!--<h2>{{title}}</h2>-->
-            <span class="location"></span>
-            <ul>
-                <li><a href="tel:{{officePhone}}">Call Office<br />
-                    {{phoneNumbers[0].value}}</a></li>
-                <li><a href="tel:{{cellPhone}}">Call Cell<br />
-                    {{phoneNumbers[0].value}}</a></li>
-                <li><a href="sms:{{cellPhone}}">SMS<br />
-                    {{phoneNumbers[0].value}}</a></li>
-                <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
-            </ul>
+            <img class='contact-image' src='img/{{this.name.givenName}}_{{this.name.familyName}}.jpg' />
+            <h1>Xin chào {{this.displayName}}</h1>
+            
         </div>
     </script>
 
@@ -74,3 +65,18 @@
         {{this.title}}</a></li>
     {{/.}}
 </script>-->
+
+
+<!--<img class='contact-image' src='img/{{firstName}}_{{lastName}}.jpg' />
+<h1>{{displayName}}</h1>
+<!--<h2>{{title}}</h2>-->
+<!--<span class="location"></span>
+<ul>
+    <li><a href="tel:{{officePhone}}">Call Office<br />
+        {{phoneNumbers[0].value}}</a></li>
+    <li><a href="tel:{{cellPhone}}">Call Cell<br />
+        {{phoneNumbers[0].value}}</a></li>
+    <li><a href="sms:{{cellPhone}}">SMS<br />
+        {{phoneNumbers[0].value}}</a></li>
+    <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
+</ul>-->
