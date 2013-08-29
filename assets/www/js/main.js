@@ -15,7 +15,7 @@ var app = {
         this.store = new DeviceContactStore(function () {
             //self.showAlert("Store Initialized", "Info");
             //self.route();
-            window.location = "js/view/calendar.html";
+            window.location = "calendar.html";
         });        
     },
 
