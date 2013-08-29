@@ -14,7 +14,7 @@ function createNewEvent() {
 		alert("Your event have created successful!");
 	};
 	var error = function(message) {
-		alert("Your event have created fail!");
+		alert("Your event have created fail: " + message);
 	};
 	window.plugins.calendarPlugin.createEvent(title, location, notes, startDate, endDate, success, error);
 }
