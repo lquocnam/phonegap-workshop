@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<title>Calendar List</title>
+
+		<script type="text/javascript" src="lib/cordova.js"></script>
+		<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="lib/calendar.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// Cordova is ready
+			//
+			function onDeviceReady() {
+
+				// createContact();
+			}
+
+			function sayHEllo() {
+				alert('hello message342234');
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<form>
+			<!--<label for="eventTilte">Title</label>
+			<input type="text" id="eventTilte">
+			<br />
+			<label for="eventLocation">Location</label>
+			<input type="text" id="eventLocation">
+			<br />
+			<label for="eventNote">Note</label>
+			<input type="text" id="eventNote">
+			<br />-->
+			<input type="button" id="btncreateEvent" value="Add Event" onclick="createNewEvent();">
+			
+		</form>
+	</body>
+</html>

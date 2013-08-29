@@ -10,12 +10,17 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.detailsURL = /^#contacts\/([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})/;
+        this.detailsURL = /^#contacts\/([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})/;//[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}
         this.registerEvents();
         this.store = new DeviceContactStore(function () {
             //self.showAlert("Store Initialized", "Info");
-            self.route();
+            //self.route();
+            window.location = "js/view/calendar.html";
         });        
+    },
+
+    activeContact: function () {
+
     },
 
     registerEvents: function () {
