@@ -1,4 +1,4 @@
-package net.phonegap.excellentcompany.plugins;
+package net.phonegap.plugins;
 
 import org.apache.cordova.api.CallbackContext;
 import org.apache.cordova.api.CordovaPlugin;

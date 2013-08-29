@@ -104,7 +104,7 @@
       <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
     </feature>
     <feature name="CalendarPlugin">
-      <param name="android-package" value="net.phonegap.excellentcompany.plugins.CalendarPlugin"/>
+      <param name="android-package" value="net.phonegap.plugins.CalendarPlugin"/>
     </feature>
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
