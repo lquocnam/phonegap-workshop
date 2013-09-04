@@ -8,8 +8,7 @@
 
 		<script type="text/javascript" src="lib/cordova.js"></script>
 		<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
-		<script type="text/javascript" src="lib/calendar.js"></script>
-
+		<script type="text/javascript" src="lib/calendar.js"></script>		
 		<script type="text/javascript" charset="utf-8">
 			//
 			document.addEventListener("deviceready", onDeviceReady, false);
@@ -30,17 +29,13 @@
 	<body>
 
 		<form>
-			<!--<label for="eventTilte">Title</label>
-			<input type="text" id="eventTilte">
-			<br />
-			<label for="eventLocation">Location</label>
-			<input type="text" id="eventLocation">
-			<br />
-			<label for="eventNote">Note</label>
-			<input type="text" id="eventNote">
-			<br />-->
-			<input type="button" id="btncreateEvent" value="Add Event" onclick="createNewEvent();">
+
+			<input style="background-color: Red" type="button" id="btncreateEvent" value="Add Event" onclick="createNewEvent();">
+			<input style="background-color: Gray" type="button" id="btnViewEvent" value="View Event" onclick="viewCalendarEvent();">
+			<br/>
+			<input style="background-color: Yellow" type="button" id="btncreateContact" value="Add Contact" onclick="createNewContact();">
 			
+			<input style="background-color: Green" type="button" id="btncontactList" value="View Contact" onclick="viewContactList();">
 		</form>
 	</body>
 </html>
